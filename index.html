@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rahul Arora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #070a14;
+      --fg: #ffffff;
+      --muted: #d3d8e4;
+      --accent: #9bd9ff;
+      --card: rgba(0,0,0,.5);
+      --stroke: rgba(255,255,255,.2);
+      --shadow: 0 10px 40px rgba(0,0,0,.65);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Ubuntu,Arial,sans-serif; color:var(--fg);
+      background:radial-gradient(900px 600px at 75% -10%, #14213d 0%, #070a14 55%, #030509 100%);} 
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    header{position:sticky; top:0; z-index:10; backdrop-filter:blur(8px);
+      background:linear-gradient(to bottom, rgba(7,10,20,.85), rgba(7,10,20,.5)); border-bottom:1px solid var(--stroke)}
+    .nav{max-width:900px; margin:0 auto; padding:.6rem 1rem; display:flex; align-items:center; gap:1rem}
+    .brand{font-weight:800; color:#ffffff}
+    .spacer{flex:1}
+
+    main{isolation:isolate}
+    .wrap{max-width:900px; padding:3.5rem 1.25rem; margin:auto}
+
+    /* HERO */
+    .hero{min-height:80vh; display:grid; place-items:center; background:
+      radial-gradient(900px 520px at 10% 10%, rgba(155,155,255,.08), transparent 70%),
+      url('https://d2pn8kiwq2w21t.cloudfront.net/original_images/imagesexoplanet20170222PIA21423-16.jpg'); /* chosen exoplanet background */
+      background-size:cover; background-position:center; box-shadow:inset 0 -160px 220px rgba(0,0,0,.85)}
+    .hero .wrap{display:grid; grid-template-columns:1.2fr .8fr; gap:2rem; align-items:center}
+
+    h1{font-size:clamp(3rem, 8vw, 5rem); line-height:1.02; margin:.2rem 0 .6rem; color:#ffffff; text-shadow:0 0 25px rgba(155,217,255,.4)}
+    .lead{font-size:clamp(1.05rem, 1.4vw, 1.2rem); color:#e2e6f0}
+
+    .glass{background:var(--card); border:1px solid var(--stroke); border-radius:22px; padding:1.5rem; box-shadow:var(--shadow)}
+
+    .profile{justify-self:center; width:min(340px, 70vw); aspect-ratio:1/1; border-radius:50%; overflow:hidden; position:relative; border:2px solid var(--stroke); background:rgba(255,255,255,.05)}
+    .profile img{width:100%; height:100%; object-fit:cover; display:block}
+    .profile .ph{position:absolute; inset:0; display:grid; place-items:center; color:#ccc; font-weight:600; letter-spacing:.02em}
+
+    section.simple{background:radial-gradient(800px 500px at 100% 0%, rgba(125,102,255,.1), transparent 70%)}
+    .card{background:var(--card); border:1px solid var(--stroke); border-radius:18px; padding:1.1rem 1.1rem; color:#f5f7ff}
+
+    .btns{display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.9rem}
+    .btn{display:inline-flex; align-items:center; gap:.5rem; padding:.6rem .9rem; border-radius:12px; border:1px solid var(--stroke); background:rgba(255,255,255,.1); color:#ffffff; font-weight:600}
+    .btn:hover{background:rgba(255,255,255,.2)}
+
+    footer{border-top:1px solid var(--stroke); padding:1rem; text-align:center; color:#ccc; background:rgba(0,0,0,.4)}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="brand">RAHUL • EXOPLANETS</div>
+      <div class="spacer"></div>
+      <a href="#about">About</a>
+      <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="glass">
+        <h1>Rahul Arora</h1>
+        <p class="lead">PhD researcher exploring volcanic outgassing and thin <span class="mono">H₂</span> atmospheres on close-in rocky exoplanets.</p>
+        <div class="btns">
+          <a class="btn" href="#about">About</a>
+          <a class="btn" href="#contact">Email</a>
+        </div>
+      </div>
+      <figure class="profile" aria-label="Profile photo">
+        <img src="" alt="Rahul Arora portrait" onerror="this.style.display='none'">
+        <div class="ph">Your photo here (400×400)</div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="about" class="simple">
+    <div class="wrap">
+      <div class="card">
+        <h2 style="margin:.2rem 0 .4rem; color:#ffffff">About me</h2>
+        <p style="color:#dbe2ef; max-width:72ch">
+          I’m Rahul Arora, a planetary scientist passionate about understanding how worlds form, evolve, and express activity. My interests span from interior processes like <strong>volcanism and mantle chemistry</strong> to atmospheric escape, outgassing, and their combined role in shaping a planet’s climate and potential habitability.
+        </p>
+        <p style="color:#dbe2ef; max-width:72ch">
+          I’m fascinated by <strong>exoplanets</strong> that challenge our imagination — tidally heated rocky worlds, sub-Neptunes with mysterious envelopes, and planets where we might one day detect volcanic activity beyond our Solar System. I love building and visualizing models that connect the deep interior to what telescopes like <strong>JWST</strong> can observe.
+        </p>
+        <p style="color:#dbe2ef; max-width:72ch">
+          Outside research, I enjoy creating astronomy-themed visuals, exploring data-driven storytelling, and communicating the beauty of planetary science to a wider audience.
+        </p>
+        <div class="btns">
+          <a class="btn" href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="btn" href="CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="min-height:40vh; display:flex; align-items:center">
+    <div class="wrap">
+      <div class="card">
+        <h2 style="margin:.2rem 0 1rem; color:#ffffff">Contact</h2>
+        <p style="color:#dbe2ef">Email: <a href="mailto:rahularora@example.com">rahularora@example.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <small>© <span id="year"></span> Rahul Arora • NASA backgrounds are public-domain. Replace URLs if desired.</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
